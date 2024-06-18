@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "pickpocket",
+	"version": "${version}",
+	"name": "Pickpocket",
+	"description": "Halt criminal scum! You are using a mod which allows you to stealthily sneak up and access another player's inventory! Pay the price or suffer the consequences!",
+	"authors": [
+		"TechTastic"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT License",
+	"icon": "assets/pickpocket/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "io.github.techtastic.pickpocket.Pickpocket",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "io.github.techtastic.pickpocket.Pickpocket${'$'}Client",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"pickpocket.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21-",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}
